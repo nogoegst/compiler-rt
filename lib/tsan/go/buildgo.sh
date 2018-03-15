@@ -142,11 +142,11 @@ if [ "$SILENT" != "1" ]; then
 fi
 $CC $DIR/gotsan.cc -c -o $DIR/race_$SUFFIX.syso $FLAGS $CFLAGS
 
-$CC $OSCFLAGS test.c $DIR/race_$SUFFIX.syso -m64 -g -o $DIR/test $OSLDFLAGS $LDFLAGS
+#$CC $OSCFLAGS test.c $DIR/race_$SUFFIX.syso -m64 -g -o $DIR/test $OSLDFLAGS $LDFLAGS
 
-export GORACE="exitcode=0 atexit_sleep_ms=0"
-if [ "$SILENT" != "1" ]; then
-  $DIR/test
-else
-  $DIR/test 2>/dev/null
-fi
+#export GORACE="exitcode=0 atexit_sleep_ms=0"
+#if [ "$SILENT" != "1" ]; then
+#  $DIR/test
+#else
+#  $DIR/test 2>/dev/null
+#fi
