@@ -105,7 +105,7 @@ extern char **_environ;
 #endif
 
 #if !SANITIZER_ANDROID
-#include <sys/signal.h>
+#include <signal.h>
 #endif
 
 #if SANITIZER_LINUX
